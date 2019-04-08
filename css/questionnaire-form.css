@@ -1,0 +1,131 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 25px;
+    color: #505050;
+    background: #4CAF50;
+}
+
+.form {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 25px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    background: #F9F9F9;
+}
+
+fieldset {
+    padding: 0px;
+    border: medium none !important;
+    width: 100%;
+}
+
+.value_not_selected{
+    color: red;
+}
+
+.question {
+    padding-bottom: 15px;
+}
+
+.question label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 2px;
+    font-size: 15px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.question label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.question_title {
+    display: inline-block;
+    font-size: 17px;
+    padding-bottom: 5px;
+}
+
+.checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #dcd7d7;
+}
+
+.radio {
+    border-radius: 50%;
+}
+
+.question label:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.question label input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.question label input:checked~.checkmark:after {
+    display: block;
+}
+
+.question .radio:after {
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.question .checkbox:after {
+    left: 5px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.control_button button {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #4CAF50;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.control_button button[type="reset"] {
+    background: #3e3838;
+}
+
+.control_button button[type="submit"]:hover {
+    background: #43A047;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.control_button button[type="reset"]:hover {
+    background: #2c2828;
+    transition: background-color 0.3s ease-in-out;
+}

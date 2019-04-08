@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Questionnaire Form</title>
+
+    <link rel="stylesheet" href="../css/questionnaire-form.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="form">
+        <form id="questionnaire-form" onsubmit="return validationCheck(event)">
+            <fieldset>
+                <h2>Как вы живёте?</h2>
+
+                <div class="question" id="q_1">
+                    <span class="question_title">Ваше семейное положение:</span>
+                    <label>Не замужем / Не женат
+                        <input type="radio" name="marital_status" value="Не замужем / Не женат" />
+                        <span class="checkmark radio"></span>
+                    </label>
+
+                    <label>Замужем / женат / живу в гражданском браке
+                        <input type="radio" name="marital_status" value="Замужем / женат / живу в гражданском браке" />
+                        <span class="checkmark radio"></span>
+                    </label>
+
+                    <label>Разведен(а)/ живем порознь, хотя официально не разведены
+                        <input type="radio" name="marital_status"
+                            value="Разведен(а)/ живем порознь, хотя официально не разведены" />
+                        <span class="checkmark radio"></span>
+                    </label>
+                    <label>Вдовец / вдова
+                        <input type="radio" name="marital_status" value="Вдовец / вдова" />
+                        <span class="checkmark radio"></span>
+                    </label>
+                </div>
+
+                <div class="question" id="q_2">
+                    <span class="question_title">Сколько человек проживает вместе с вами (включая Вас)?</span>
+                    <label>1
+                        <input type="radio" name="count_people_living_with_you" value="1" />
+                        <span class="checkmark radio"></span>
+                    </label>
+                    <label>2
+                        <input type="radio" name="count_people_living_with_you" value="2" />
+                        <span class="checkmark radio"></span>
+                    </label>
+                    <label>3
+                        <input type="radio" name="count_people_living_with_you" value="3" />
+                        <span class="checkmark radio"></span>
+                    </label>
+                    <label>4
+                        <input type="radio" name="count_people_living_with_you" value="4" />
+                        <span class="checkmark radio"></span>
+                    </label>
+                    <label>5
+                        <input type="radio" name="count_people_living_with_you" value="5" />
+                        <span class="checkmark radio"></span>
+                    </label>
+                    <label>Более 5
+                        <input type="radio" name="count_people_living_with_you" value="Более 5" />
+                        <span class="checkmark radio"></span>
+                    </label>
+                </div>
+
+                <div class="question" id="q_3">
+                    <span class="question_title">Какого возраста Ваши дети?</span>
+                    <label>Менее 1 года
+                        <input type="checkbox" name="age_children" value="Менее 1 года">
+                        <span class="checkmark checkbox"></span>
+                    </label>
+                    <label>От 1 года до 3
+                        <input type="checkbox" name="age_children" value="От 1 года до 3">
+                        <span class="checkmark checkbox"></span>
+                    </label>
+                    <label>От 3 до 6 лет
+                        <input type="checkbox" name="age_children" value="От 3 до 6 лет">
+                        <span class="checkmark checkbox"></span>
+                    </label>
+                    <label>От 6 до 9 лет
+                        <input type="checkbox" name="age_children" value="От 6 до 9 лет">
+                        <span class="checkmark checkbox"></span>
+                    </label>
+                    <label>От 9 до 12 лет
+                        <input type="checkbox" name="age_children" value="От 9 до 12 лет">
+                        <span class="checkmark checkbox"></span>
+                    </label>
+                    <label>От 12 до 16 лет
+                        <input type="checkbox" name="age_children" value="От 12 до 16 лет">
+                        <span class="checkmark checkbox"></span>
+                    </label>
+                    <label>Старше 16
+                        <input type="checkbox" name="age_children" value="Старше 16">
+                        <span class="checkmark checkbox"></span>
+                    </label>
+                </div>
+
+                <div class="question" id="q_4">
+                    <span class="question_title">Что из перечисленного вы делали за последние 12 месяцев?</span>
+                    <label>Ездили в туристическую поездку в страны дальнего зарубежья
+                        <input type="checkbox" name="what_you_did"
+                            value="Ездили в туристическую поездку в страны дальнего зарубежья">
+                        <span class="checkmark checkbox"></span>
+                    </label>
+                    <label>Покупали глянцевые журналы
+                        <input type="checkbox" name="what_you_did" value="Покупали глянцевые журналы">
+                        <span class="checkmark checkbox"></span>
+                    </label>
+                    <label>Покупали электроннику (DVD, фотоаппарат, видеокамера, телефон и т.п.)
+                        <input type="checkbox" name="what_you_did"
+                            value="Покупали электроннику (DVD, фотоаппарат, видеокамера, телефон и т.п.)">
+                        <span class="checkmark checkbox"></span>
+                    </label>
+                    <label>Покупали крупную мебель в гостиную/спальню (шкафы, кровати и др.)
+                        <input type="checkbox" name="what_you_did"
+                            value="Покупали крупную мебель в гостиную/спальню (шкафы, кровати и др.)">
+                        <span class="checkmark checkbox"></span>
+                    </label>
+                    <label>Покупали недвижимость
+                        <input type="checkbox" name="what_you_did" value="Покупали недвижимость">
+                        <span class="checkmark checkbox"></span>
+                    </label>
+                    <label>Посещали кинотеатры
+                        <input type="checkbox" name="what_you_did" value="Посещали кинотеатры">
+                        <span class="checkmark checkbox"></span>
+                    </label>
+                    <label>Посещали рестораны / бары
+                        <input type="checkbox" name="what_you_did" value="Посещали рестораны / бары">
+                        <span class="checkmark checkbox"></span>
+                    </label>
+                    <label>Посещали театр / музей / выставку
+                        <input type="checkbox" name="what_you_did" value="Посещали театр / музей / выставку">
+                        <span class="checkmark checkbox"></span>
+                    </label>
+                </div>
+
+                <div class="control_button">
+                    <button type="reset" onclick="clearAllDisabledCheckboxes()">Очистить</button>
+                    <button type="submit">Отправить</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="../scripts/questionnaire-form.js"></script>
+</body>
+
+</html>
