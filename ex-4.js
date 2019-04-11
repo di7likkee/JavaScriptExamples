@@ -1,3 +1,6 @@
+var isMomHappy = false;
+
+// Promise
 var willIGetNewPhone = new Promise(
     function (resolve, reject) {
         if (isMomHappy) {
